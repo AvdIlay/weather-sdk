@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  weather-sdk:
+    build: .
+    container_name: weather-sdk
+    environment:
+      WEATHER_API_KEY: "your-key"
+      WEATHER_MODE: "POLLING"
+      WEATHER_TTL_MINUTES: "1"
+      WEATHER_CACHE_SIZE: "3"
+      WEATHER_CITY: "London,Paris"
+    restart: "no"
